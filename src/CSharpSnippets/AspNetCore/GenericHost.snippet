@@ -30,7 +30,11 @@
                 })
                 .ConfigureServices((context, services) =>
                 {
-
+                    if (context.HostingEnvironment.IsDevelopment())
+                    {
+                      // Development service configuration
+                    }
+                    services.AddHostedService<LifetimeEventsHostedService>();
                 })
                 .ConfigureLogging((context, logging) =>
                 {
