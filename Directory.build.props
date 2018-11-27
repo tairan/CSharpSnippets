@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+
+    <Authors>Tairan Wang</Authors>
+    <Copyright>Copyright 2018 Tairan Wang</Copyright>
+
+    <RepositoryUrl>https://github.com/tairan/CSharpSnippets</RepositoryUrl>
+  </PropertyGroup>
+</Project>
