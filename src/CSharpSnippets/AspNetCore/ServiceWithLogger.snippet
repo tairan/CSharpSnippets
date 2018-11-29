@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Service with Logger</Title>
+      <Shortcut>svclog</Shortcut>
+      <Description>A service with logger</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>DefaultService</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[class $name$
+    {
+        private readonly ILogger<$name$> _logger;
+
+        public $name$(ILogger<$name$> logger)
+        {
+            _logger = logger;
+        }
+    }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging.Abstractions</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Logging</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
