@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>IServiceCollection Extensions.</Title>
+      <Shortcut>svcext</Shortcut>
+      <Description>Asp.Net Core service depenency injection.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>IServiceCollectionExtensions</Default>
+        </Literal>
+        <Literal>
+          <ID>method</ID>
+          <ToolTip>Method name</ToolTip>
+          <Default>AddService</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[static class $name$
+    {
+        public static IServiceCollection $method$(this IServiceCollection services)
+        {
+            
+            return services;
+        }
+    }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
