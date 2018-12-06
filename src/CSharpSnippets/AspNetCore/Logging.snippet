@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Class with logger factory</Title>
+      <Shortcut>loggerfactoryclass</Shortcut>
+      <Description>A class with logger factory.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[class $name$
+        {
+            private readonly ILogger _logger;
+            
+            public $name$(ILoggerFactory loggerFactory)
+            {
+                _logger = loggerFactory.CreateLogger<$name$>();$end$
+            }
+        }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Logging</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Class with logger</Title>
+      <Shortcut>loggerclass</Shortcut>
+      <Description>A class with logger.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[class $name$
+        {
+            private readonly ILogger<$name$> _logger;
+            
+            public $name$(ILogger<$name$> logger)
+            {
+                _logger = logger;$end$
+            }
+        }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Logging</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

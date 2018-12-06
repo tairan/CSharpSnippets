@@ -3,9 +3,9 @@
     xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>IServiceCollection Extensions.</Title>
-      <Shortcut>svcext</Shortcut>
-      <Description>Asp.Net Core service depenency injection.</Description>
+      <Title>DataContract</Title>
+      <Shortcut>contract-data</Shortcut>
+      <Description>Specifies that the type defines or implements a data contract and is serializable by a serializer</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -17,27 +17,19 @@
         <Literal>
           <ID>name</ID>
           <ToolTip>Class name</ToolTip>
-          <Default>IServiceCollectionExtensions</Default>
-        </Literal>
-        <Literal>
-          <ID>method</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>AddService</Default>
+          <Default>MyClass</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[static class $name$
-    {
-        public static IServiceCollection $method$(this IServiceCollection services)
+        <![CDATA[[DataContract]
+        class $name$
         {
-            
-            return services;
-        }
-    }]]>
+            $end$
+        }]]>
       </Code>
       <References>
         <Reference>
-          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+          <Assembly>Newtonsoft.Json</Assembly>
         </Reference>
       </References>
       <Imports>
@@ -45,7 +37,7 @@
           <Namespace>System</Namespace>
         </Import>
         <Import>
-          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+          <Namespace>Newtonsoft.Json</Namespace>
         </Import>
       </Imports>
     </Snippet>
