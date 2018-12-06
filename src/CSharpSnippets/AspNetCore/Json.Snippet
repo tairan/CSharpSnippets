@@ -210,4 +210,42 @@
       </Imports>
     </Snippet>
   </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Json Serialize Object with camelPropertyName</Title>
+      <Shortcut>jsonserialcamel</Shortcut>
+      <Description>Object Serialize to Json with ignore null value.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[JsonConvert.SerializeObject($value$, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() })$end$]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Newtonsoft.Json</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Newtonsoft.Json</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
 </CodeSnippets>
