@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CollectionDataContract</Title>
+      <Shortcut>serial-collection</Shortcut>
+      <Description>When applied to a collection type, enables custom specification of the collection item elements.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[CollectionDataContract]
+        public class $name$
+        {
+            $end$
+        }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>System.Runtime.Serialization</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Runtime.Serialization</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ContractNamespace</Title>
+      <Shortcut>serial-namespace</Shortcut>
+      <Description>Specifies the CLR namespace and XML namespace of the data contract.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>namespace</ID>
+          <ToolTip>Namespace name</ToolTip>
+          <Default>MyNamespace</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[ContractNamespace]
+        namespace $namespace$
+        {
+            $end$
+        }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>System.Runtime.Serialization</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Runtime.Serialization</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DataContract</Title>
+      <Shortcut>serial-data</Shortcut>
+      <Description>Specifies that the type defines or implements a data contract and is serializable by a serializer.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[DataContract]
+        class $name$
+        {
+            $end$
+        }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>System.Runtime.Serialization</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Runtime.Serialization</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DataMember</Title>
+      <Shortcut>serial-member</Shortcut>
+      <Description>When applied to the member of a type, specifies that the member is part of a data contract and is serializable by the DataContractSerializer.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>modifier</ID>
+          <ToolTip>Access modifier</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>MyPropertyName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[DataMember]
+        $modifier$ $type$ $name$ { get; set; }$end$]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>System.Runtime.Serialization</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Runtime.Serialization</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+
+</CodeSnippets>
