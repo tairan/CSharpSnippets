@@ -73,6 +73,7 @@
     <Content Include="AspNetCore\Serialization.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="AspNetCore\Routing.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
