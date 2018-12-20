@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add HealthChecks</Title>
+      <Shortcut>healthcheckssvc</Shortcut>
+      <Description>Add the HealthCheck using the AddXXX IServiceCollection extension methods.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>IServerCollection name</ToolTip>
+          <Default>services</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$name$.AddHealthChecks()$end$]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Diagnostics.HealthChecks</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Use HealthChecks</Title>
+      <Shortcut>healthcheckcfg</Shortcut>
+      <Description>To integrate HealthChecks</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>IServerCollection name</ToolTip>
+          <Default>services</Default>
+        </Literal>
+        <Literal>
+          <ID>path</ID>
+          <ToolTip>path of health checks</ToolTip>
+          <Default>healthchecks</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$name$.UseHealthChecks("/$path$")$end$]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.AspNetCore.Diagnostics.HealthChecks</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

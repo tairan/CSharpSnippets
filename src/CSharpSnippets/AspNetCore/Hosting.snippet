@@ -4,7 +4,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Create Generic Host</Title>
-      <Shortcut>hosting-generic</Shortcut>
+      <Shortcut>hostgeneric</Shortcut>
       <Description>.NET Core apps configure and launch a host.</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
@@ -19,13 +19,13 @@
                 {
                     context.SetBasePath(Directory.GetCurrentDirectory());
                     context.AddJsonFile("hostsettings.json", optional: true);
-                    context.AddEnvironmentVariables(prefix: "PREFIX_");
+                    context.AddEnvironmentVariables();
                     context.AddCommandLine(args);
                 })
                 .ConfigureAppConfiguration((context, config) =>
                 {
                     config.AddJsonFile("appsettings.json", optional: true);
-                    config.AddEnvironmentVariables(prefix: "PREFIX_");
+                    config.AddEnvironmentVariables();
                     config.AddCommandLine(args);
                 })
                 .ConfigureServices((context, services) =>
@@ -95,6 +95,117 @@
         </Import>
       </Imports>
     </Snippet>
+  </CodeSnippet>
 
+<CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Hosted Service</Title>
+      <Shortcut>hostedservice</Shortcut>
+      <Description>A hosted service is a class with background task logic that implements the IHostedService interface.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>DefaultHostService</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[class $name$ : IHostedService, IDisposable
+    {
+        private readonly ILogger<$name$> _logger;
+
+        public $name$(ILogger<$name$> logger)
+        {
+            _logger = logger;
+        }
+
+        public Task StartAsync(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }]]>
+      </Code>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Configuration</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Configuration.Abstractions</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Configuration.CommandLine</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Configuration.EnvironmentVariables</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Configuration.Json</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Hosting</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Hosting.Abstractions</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging.Abstractions</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging.Configuration</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging.Console</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.Logging.Debug</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Extensions.DependencyInjection</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Configuration</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.DependencyInjection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Hosting</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Extensions.Logging</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
   </CodeSnippet>
 </CodeSnippets>
