@@ -4,7 +4,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Service with Logger and HttpClient</Title>
-      <Shortcut>httpclient</Shortcut>
+      <Shortcut>clientwithlogging</Shortcut>
       <Description>A HttpClient service with logger</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
@@ -23,13 +23,13 @@
       <Code Language="csharp">
         <![CDATA[class $name$
     {
-        private readonly ILogger<$name$> _logger;
+        private readonly ILogger _logger;
         private readonly IHttpClientFactory _httpClientfactory;
 
-        public $name$(ILogger<$name$> logger,
+        public $name$(ILoggerFactory loggerFactory,
             IHttpClientFactory httpClientfactory)
         {
-            _logger = logger;
+            _logger = loggerFactory.CreateLogger<$name$>();
             _httpClientfactory = httpClientfactory;
         }
     }]]>
@@ -71,7 +71,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Service with Logger and HttpClient</Title>
-      <Shortcut>httpclientonly</Shortcut>
+      <Shortcut>clientwithtyped</Shortcut>
       <Description>A HttpClient service with logger</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
