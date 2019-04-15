@@ -1,10 +1,10 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>0.2.0</VersionPrefix>
+    <VersionPrefix>0.3.1</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 
     <Authors>Tairan Wang</Authors>
-    <Copyright>Copyright 2018 Tairan Wang</Copyright>
+    <Copyright>Copyright 2019 Tairan Wang</Copyright>
 
     <RepositoryUrl>https://github.com/tairan/CSharpSnippets</RepositoryUrl>
   </PropertyGroup>
