@@ -1,0 +1,4 @@
+﻿[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+"Library"="$PackageFolder$\Snippets\Library"
+"Console"="$PackageFolder$\Snippets\Console"
+"AspNetCore"="$PackageFolder$\Snippets\AspNetCore"

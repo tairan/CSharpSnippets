@@ -47,69 +47,45 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AspNetCore\DependencyInjection.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\AspNetCore\DependencyInjection.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Json.Snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="AspNetCore\Logging.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\AspNetCore\Logging.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Serialization.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\AspNetCore\Hosting.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="AspNetCore\Routing.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\AspNetCore\HealthChecks.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Environments.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\AspNetCore\Startup.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Configuration.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\Library\ArgumentCheck.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Middleware.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\Library\Json.Snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Options.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\Library\Serialization.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\Startup.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Snippets\Console\Console.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="AspNetCore\ArgumentCheck.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="AspNetCore\HealthChecks.snippet" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AspNetCore\AspNetCore.pkgdef">
+    <Content Include="CSharpSnippets.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="AspNetCore\Hosting.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <SubType>Designer</SubType>
     </Content>
     <Content Include="index.html" />
     <Content Include="LICENSE.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="stylesheet.css" />

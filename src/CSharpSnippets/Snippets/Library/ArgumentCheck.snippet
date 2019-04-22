@@ -23,8 +23,8 @@
       <Code Language="csharp">
         <![CDATA[if (string.IsNullOrWhiteSpace($name$))
                  {
-                     throw new ArgumentNullException(nameof($name$));$end$
-                 }]]>
+                     throw new ArgumentNullException(nameof($name$));
+                 }$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -49,10 +49,10 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[if (null == $name$)
+        <![CDATA[if ($name$ == null)
                  {
-                     throw new ArgumentNullException(nameof($name$));$end$
-                 }]]>
+                     throw new ArgumentNullException(nameof($name$));
+                 }$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
