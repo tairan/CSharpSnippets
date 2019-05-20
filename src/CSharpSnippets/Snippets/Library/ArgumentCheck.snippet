@@ -49,10 +49,7 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[if ($name$ == null)
-                 {
-                     throw new ArgumentNullException(nameof($name$));
-                 }$end$]]>
+        <![CDATA[$name$ ?? throw new ArgumentNullException(nameof($name$));$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
