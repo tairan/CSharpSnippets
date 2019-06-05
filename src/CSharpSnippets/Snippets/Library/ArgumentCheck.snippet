@@ -4,7 +4,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Check string parameter is null or whitspace</Title>
-      <Shortcut>checkstr</Shortcut>
+      <Shortcut>chkstr</Shortcut>
       <Description>Check string parameter is null or whitspace then throw an exception.</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
@@ -32,7 +32,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Check object parameter is null or not.</Title>
-      <Shortcut>checkobj</Shortcut>
+      <Shortcut>chkobj</Shortcut>
       <Description>Check the object parameter is null then throw an exception.</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
@@ -49,7 +49,40 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[$name$ ?? throw new ArgumentNullException(nameof($name$));$end$]]>
+        <![CDATA[if ($name$ == null)
+                 {
+                     throw new ArgumentNullException(nameof($name$));
+                 }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Check object parameter is null or not.</Title>
+      <Shortcut>chkobjthenset</Shortcut>
+      <Description>Check the object parameter is null then throw an exception.</Description>
+      <Author>Tairan Wang</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>parameter name</ToolTip>
+          <Default>value</Default>
+        </Literal>
+        <Literal>
+          <ID>varname</ID>
+          <ToolTip>a variable name</ToolTip>
+          <Default>field</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[var $varname$ = $name$ ?? throw new ArgumentNullException(nameof($name$));]]>
       </Code>
     </Snippet>
   </CodeSnippet>

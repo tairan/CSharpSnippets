@@ -4,8 +4,8 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Startup constructor with configuration.</Title>
-      <Shortcut>startupctorcfg</Shortcut>
-      <Description>Startup constructor with configuration.</Description>
+      <Shortcut>startupctor</Shortcut>
+      <Description>Startup constructor with configuration and hosting environment.</Description>
       <Author>Tairan Wang</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -14,12 +14,17 @@
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[public IConfiguration Configuration { get; }
-        
-        public Startup(IConfiguration configuration)
+        <![CDATA[public Startup(
+            IHostingEnvironment hostingEnvironment，
+            IConfiguration configuration)
         {
+            HostingEnvironment = hostingEnvironment;
             Configuration = configuration;$end$
         }
+        
+        public IConfiguration Configuration { get; }
+        
+        public IHostingEnvironment HostingEnvironment { get; }
 ]]>
       </Code>
       <Imports>

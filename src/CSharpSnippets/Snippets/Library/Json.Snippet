@@ -15,6 +15,11 @@
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>modifier</ID>
+          <ToolTip>Access modifier</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
           <ID>name</ID>
           <ToolTip>Class name</ToolTip>
           <Default>MyClass</Default>
@@ -22,7 +27,7 @@
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[JsonObject]
-        class $name$
+        $modifier$ class $name$
         {
             $end$
         }]]>

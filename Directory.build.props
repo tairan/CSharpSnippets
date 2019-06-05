@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>0.5.1</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
+    <VersionPrefix>0.6.0</VersionPrefix>
+    <VersionSuffix>alpha.0</VersionSuffix>
 
     <Authors>Tairan Wang</Authors>
     <Copyright>Copyright 2019 Tairan Wang</Copyright>
